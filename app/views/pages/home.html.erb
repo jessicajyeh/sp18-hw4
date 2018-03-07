@@ -1,0 +1,28 @@
+<h1>Rails Decal!</h1>
+<h2>Here are some cats:</h2>
+ <% @cats.each do |c| %>
+ 	Name: <%= c.name %>
+ 	<br>
+ <% end %>
+
+ <h2>Here are some users:</h2>
+ <% @users.each do |u| %>
+ 	Name: <%= u.username %> <br>
+ 	Email: <%= u.email %> <br>
+ 	Age: <%= u.age %> <br>
+ 	<br>
+ <% end %>
+
+ <h2>TODO LIST!</h2>
+ <% @todos.each do |t| %>
+ 	<% if t.completed %>
+ 		Completed: 
+ 	<% else %>
+ 		Not complete:
+ 	<% end %>
+ 	<%= t.name %>
+ 	<br>
+ <% end %>
+
+<br>
+<%= link_to "Create a Task", todos_new_path %>

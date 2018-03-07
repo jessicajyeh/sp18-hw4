@@ -1,0 +1,10 @@
+<p>Create a task!</p>
+
+<%= form_for @todo do |t|%>
+  <%= t.label :name%>
+  <%= t.text_field :name %>
+  <%= t.label :completed%>
+  <%= t.check_box :completed %>
+
+  <%= t.submit%>
+<% end %>
